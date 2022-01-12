@@ -1,17 +1,24 @@
-import { createContext } from "react";
+import { createContext,useState } from "react";
 
 const FavouriteContext = createContext({
   favourites: [],
   totalFavourites: 0,
+  addFavourite: (favouriteMeetup) => { },
+  removeFavourite: (meetupId) => { },
+  itemIsFavourite: (meetupId) => { }
+  
+  
 });
 export const FavouriteContextProvider = (props) => {
-  const [userFavourites, setuserFavourites] = useState([]);
-
+  const [userFavourites, setUserFavourites] = useState([])
   const addFavouriteHandler = (favouriteMeetup) => {
-    setuserFavourites([...userFavourites, favouriteMeetup]);
-  };
+    setUserFavourites(prevUserFavourites => {
+      prevUserFavourites.concat(favouriteMeetup)
+    })
+  }
+
   const removeFavouriteHandler = (meetupId) => {
-    setuserFavourites((prevUserFavourites) => {
+    setUserFavourites((prevUserFavourites) => {
       return prevUserFavourites.filter((meetup) => meetup.id !== meetupId);
     });
   };

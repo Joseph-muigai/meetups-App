@@ -5,7 +5,7 @@ import classes from "./NavBar.module.css";
 const NavBar = () => {
   return (
     <header className={classes.header}>
-      <div className={classes.logo}>React Meetups</div>
+      <div className={classes.logo}>Meetups app</div>
       <nav>
         <ul>
           <li>

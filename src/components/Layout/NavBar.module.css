@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #77002e;
+  background-color: #037452;
   padding: 0 10%;
 }
 .logo {
@@ -20,12 +20,12 @@
   justify-content: space-between;
 }
 .header li {
-  margin-left: 10px;
+  margin-left: 20px;
 }
 .header a {
   text-decoration: none;
   font-size: 1.5rem;
-  color: #fcb8d2;
+  color: #14d397;
 }
 .header a:hover,
 .header a:active,
@@ -33,7 +33,7 @@
   color: white;
 }
 .bagde {
-  background-color: #cc2062;
+  background-color: #20cca1;
   color: white;
   border-radius: 12px;
   margin-left: 0.5rem;
